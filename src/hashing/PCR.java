@@ -94,7 +94,7 @@ public class PCR implements IData<PCR> {
 
         try {
             hlpOutStream.writeInt(ID);
-            hlpOutStream.writeChars("|");
+            hlpOutStream.writeChar('*');
 
             hlpOutStream.writeInt(name_LENGTH);
             hlpOutStream.writeChars(name);
@@ -118,14 +118,18 @@ public class PCR implements IData<PCR> {
 
         try {
             ID = hlpInStream.readInt();
+            // System.out.println(ID);
             hlpInStream.readChar();
+            // System.out.println("Retour char: " + hlpInStream.readChar());
 
             // System.out.println(hlpInStream.readInt());
             name_LENGTH = hlpInStream.readInt();
+            // System.out.println("name : " + name_LENGTH);
             name = "";
             for (int i = 0; i < name_LENGTH; i++) {
                 name += hlpInStream.readChar();
             }
+            // System.out.println("surname : " + surname_LENGTH);
             surname_LENGTH = hlpInStream.readInt();
             surname = "";
             for (int i = 0; i < surname_LENGTH; i++) {
