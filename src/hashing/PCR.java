@@ -18,8 +18,8 @@ public class PCR implements IData<PCR> {
     private Boolean result;
     private int name_LENGTH;
     private int surname_LENGTH;
-    private final static int BORN_LENGTH = 8;
-    private final static int DATE_LENGTH = 8;
+    private final static int BORN_LENGTH = 10;
+    private final static int DATE_LENGTH = 10;
     private final static int HOUR_LENGTH = 5;
 
     public PCR() {
